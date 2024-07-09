@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // setTimeout
+        /*
+        console.log("a");
+        setTimeout(() => {
+            console.log("b");
+            setTimeout(() => console.log("c"), 2000);
+        }, 2000)
+        console.log("d");
+        */
+
+        // callback
+        /*
+        console.log("a");
+        function b(cb) {
+            console.log("b");
+            setTimeout(cb, 2000);
+        }
+        function c() {
+            console.log("c");
+        }
+        b(c)
+        console.log("d");
+        */
+
+        // Promises 2014r.
+        /*
+        let prom = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const l = Math.round(Math.random());
+                if (l % 2 == 0)
+                    resolve("Jestem parzysta: " + l);
+                else
+                    reject("Lipka: " + l);
+            }, 1000)
+        })
+
+        prom.then(
+            (ok) => console.info(ok),
+            (no) => console.error(no)
+        );
+        console.log("d");
+        */
+
+        // Async/Await 2017r.
+        async function start() {
+            let prom = new Promise((res) => {
+                setTimeout(() => {
+                    res('minęły 2s.')
+                }, 2000);
+            })
+            //console.log(prom);
+            console.log(await prom);
+            console.log("meta");
+        }
+        start();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

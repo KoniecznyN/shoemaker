@@ -1,0 +1,94 @@
+@font-face {
+  font-family: "Press Start 2P";
+  src: url("fonts/PressStart2P.ttf");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Press Start 2P";
+}
+
+body {
+  background-color: #15330a;
+}
+
+#game {
+  margin: 50px;
+}
+
+#game > h2,
+#game > #images > #location,
+#game > #textarea > * {
+  margin: 12px;
+}
+
+#game > h2,
+#game > #textarea > p,
+#game > #textarea > label,
+#game > #textarea > input[type="text"] {
+  color: #72cc52;
+}
+
+#game > #images > #location {
+  border: 3px solid #1c6600;
+  border-radius: 3px;
+  width: 400px;
+}
+
+#game > #images > #compas {
+  position: absolute;
+  left: 490px;
+  top: 175px;
+  margin-left: 30px;
+  margin-bottom: 50px;
+  width: 300px;
+}
+
+#coverN,
+#coverS,
+#coverE,
+#coverW {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #15330a;
+  /* border: 3px #72cc52 solid; */
+}
+
+#coverN {
+  top: 172px;
+  left: 650px;
+}
+
+#coverS {
+  top: 296px;
+  left: 658px;
+}
+
+#coverE {
+  top: 212px;
+  left: 785px;
+}
+
+#coverW {
+  top: 212px;
+  left: 533px;
+}
+
+#game > #textarea > input[type="text"] {
+  border: none;
+  background-color: #15330a;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+#game > #textarea > input[type="text"]:focus {
+  outline: none;
+}
+
+body > img {
+  height: 100vh;
+  width: 100vw;
+}
